@@ -1,0 +1,27 @@
+server:
+  port: 8080
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${vcap.services.ocr-eureka.credentials.uri:http://rashmitr:8761/eureka/}
+  instance:
+    hostname: ${vcap.application.uris[0]:rashmitr}
+    metadataMap:
+      instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}
+
+zuul:
+  routes:
+    races: /races/**
+    participants: /paticipants/**
+
+
+---
+spring:
+  profiles: cloud
+eureka:
+  instance:
+    nonSecurePort: 80
+    
+
+
+   

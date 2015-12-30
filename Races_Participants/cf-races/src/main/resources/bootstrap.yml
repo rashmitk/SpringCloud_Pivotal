@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: races
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${vcap.services.ocr-eureka.credentials.uri:http://172.27.59.95:8761/eureka/}
+  instance:
+    hostname: ${vcap.application.uris[0]:rashmitr}
+    metadataMap:
+      instanceId: Races_Rashmit

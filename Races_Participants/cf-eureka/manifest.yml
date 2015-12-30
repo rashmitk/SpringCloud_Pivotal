@@ -1,0 +1,6 @@
+---
+applications:
+- name: ocr-eureka-master
+  memory: 256M
+  host: ocr-eureka-master
+  domain: cfapps.io

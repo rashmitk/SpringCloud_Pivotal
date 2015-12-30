@@ -1,0 +1,19 @@
+server:
+  port: 8181
+
+endpoints:
+  restart:
+    enabled: true
+
+cloud:
+    config:
+      enabled: true
+      discovery:
+        enabled: true
+        serviceId: SPRINGCLOUDBUS
+
+
+race:
+  count: 0
+    
+    

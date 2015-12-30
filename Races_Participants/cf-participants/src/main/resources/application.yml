@@ -1,0 +1,24 @@
+server:
+  port: 8282
+
+endpoints:
+  restart:
+    enabled: true
+
+cloud:
+    config:
+      enabled: true
+      discovery:
+        enabled: true
+        serviceId: SPRINGCLOUDBUS
+
+
+participant:
+  count: 0
+    
+---
+spring:
+  profiles: cloud
+eureka:
+  instance:
+    nonSecurePort: 80

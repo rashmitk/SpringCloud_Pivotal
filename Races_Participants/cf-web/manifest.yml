@@ -1,0 +1,8 @@
+---
+applications:
+- name: ocr-web-master
+  memory: 512M
+  host: ocr-web-master
+  domain: cfapps.io
+  services:
+  - ocr-eureka
